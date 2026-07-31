@@ -1,9 +1,9 @@
 # VIP Lead Enrichment & AI Scoring Pipeline
 
 ## 🎯 System Overview
-This automated architecture is engineered to instantly qualify and route inbound leads captured via form submissions. By intercepting raw lead data, the system automatically enriches firmographic profiles using Apollo.io and leverages Anthropic's Claude AI to evaluate lead quality. 
+This automated architecture is engineered to empower the sales team by instantly identifying and routing the highest-value inbound leads. The pipeline intercepts new form submissions, enriches the firmographic data using Apollo.io, and leverages Anthropic's Claude AI to evaluate the true potential of the account. 
 
-A primary function of this pipeline is hunting for "Hidden Enterprises"—leads from massive organizations who intentionally downplay their company size on inbound forms. High-priority (VIP) leads are instantly routed to the sales team via Slack, while low-scoring leads are quietly archived into a CRM or spreadsheet to prevent sales channel fatigue.
+While the system automatically filters out junk data and catches "hidden enterprises," its primary business goal is pure sales enablement: ensuring Account Executives spend their time prioritizing and attacking the most lucrative opportunities without doing manual research.
 
 ## 🔀 Architectural Diagram
 
