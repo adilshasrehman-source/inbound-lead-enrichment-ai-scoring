@@ -1,4 +1,4 @@
-# VIP Lead Enrichment & AI Scoring Pipeline
+# Inbound Lead Enrichment & AI Scoring Pipeline
 
 ## 🎯 System Overview
 This automated architecture is engineered to empower the sales team by instantly identifying and routing the highest-value inbound leads. The pipeline intercepts new form submissions, enriches the firmographic data using Apollo.io, and leverages Anthropic's Claude AI to evaluate the true potential of the account. 
@@ -15,7 +15,7 @@ graph TD
     D --> E[Text Parser<br>Regex JSON Extraction]
     E --> F[Parse JSON<br>Deserialize Output]
     F --> G{Router<br>Conditional Logic Gate}
-    G -- VIP Lead Score >= 8 --> H[Slack<br>Send AE Strategy Alert]
+    G -- High-Priority Lead Score >= 8 --> H[Slack<br>Send AE Strategy Alert]
     G -- Low Score / Personal Email --> I[Google Sheets / CRM<br>Log & Archive]
 ```
 
@@ -35,7 +35,7 @@ graph TD
 
 ### 4. Routing & Notification
 *   **Router:** Acts as the gatekeeper. It checks the AI's `fit_score`.
-*   **VIP Pathway (Slack):** If the score meets the VIP threshold (e.g., >= 8), the data passes through. Slack formats a clean alert combining the original form data, the true Apollo headcount, and the AI's strategy reasoning for the Account Executive.
+*   **High-Priority Pathway (Slack):** If the score meets the threshold (e.g., >= 8), the data passes through. Slack formats a clean alert combining the original form data, the true Apollo headcount, and the AI's strategy reasoning for the Account Executive.
 *   **Standard Pathway (Sheets/CRM):** If the score is low, the flow routes the raw data into a Google Sheet or CRM for standard marketing nurture, keeping the sales channel pristine.
 
 ## 🛡️ Key Edge Cases Handled
